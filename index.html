@@ -99,11 +99,11 @@
       margin-top: 18px;
     }
 
-    .span-2 { grid-column: 1 / -1; }
-
     @media (max-width: 900px) {
       .grid { grid-template-columns: 1fr; }
     }
+
+    .span-2 { grid-column: 1 / -1; }
 
     .card {
       background: var(--card);
@@ -175,16 +175,33 @@
         <div class="pills">
           <a class="pill" href="https://scholar.google.com/citations?user=DcyrVNoAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
           <a class="pill" href="https://www.ornl.gov/staff-profile/sangkeun-matt-m-lee" target="_blank" rel="noopener noreferrer">ORNL profile</a>
-          <a class="pill" href="#publications">Selected publications</a>
-          <a class="pill" href="#projects">Projects</a>
-          <a class="pill" href="#education">Education</a>
           <a class="pill" href="#contact">Contact</a>
+          <a class="pill" href="#education">Education</a>
+          <a class="pill" href="#summary">Summary</a>
+          <a class="pill" href="#projects">Projects</a>
+          <a class="pill" href="#highlights">Highlights</a>
+          <a class="pill" href="#publications">Publications</a>
         </div>
       </div>
     </header>
 
     <div class="grid">
-      <section class="card">
+      <aside class="card" id="contact">
+        <h2>Contact</h2>
+        <ul>
+          <li>Email: lees4 [at] ornl [dot] gov</li>
+        </ul>
+      </aside>
+
+      <section class="card" id="education">
+        <h2>Education</h2>
+        <ul>
+          <li>KAIST, South Korea — B.S., Computer Science (2004)</li>
+          <li>Seoul National University, South Korea — Ph.D., Computer Science and Engineering (2012)</li>
+        </ul>
+      </section>
+
+      <section class="card span-2" id="summary">
         <h2>Summary</h2>
         <p>
           I work on data-driven modeling and analytics across interconnected systems, including resilience and reliability questions for critical infrastructure.
@@ -202,7 +219,7 @@
               <li>Applied machine learning for scientific and operational data</li>
             </ul>
           </div>
-          <div class="card" style="padding: 14px;">
+          <div class="card" style="padding: 14px;" id="highlights">
             <h2 style="margin-bottom: 8px;">Highlights and awards</h2>
             <ul>
               <li>ORNL CSMD Distinguished Software Award (2023)</li>
@@ -210,6 +227,26 @@
               <li>R&amp;D 100 Award (2016): ORiGAMI (Oak Ridge Graph Analytics for Medical Innovation)</li>
               <li>Ph.D., Computer Science and Engineering (Seoul National University, 2012)</li>
               <li>Joined ORNL in 2013</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="card span-2" id="projects">
+        <h2>Selected projects</h2>
+        <div class="two-col">
+          <div>
+            <ul>
+              <li>URBAN-NET: interdependency analytics for critical infrastructure resilience</li>
+              <li>EAGLE-I: data collection and standardization for geo-located energy information</li>
+              <li>NAERM: interdependency analysis and system resilience curve modeling</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>TASTI-GRID: weather and power system resilience correlation analysis</li>
+              <li>ASCENDS: advanced data science toolkit for non-data scientists</li>
+              <li>ORiGAMI: graph analytics for medical innovation (R&amp;D 100 Award, 2016)</li>
             </ul>
           </div>
         </div>
@@ -233,28 +270,6 @@
         </div>
       </aside>
 
-      <section class="card span-2" id="projects">
-        <h2>Selected projects</h2>
-        <div class="two-col">
-          <div>
-            <ul>
-              <li>URBAN-NET: interdependency analytics for critical infrastructure resilience</li>
-              <li>EAGLE-I: data collection and standardization for geo-located energy information</li>
-              <li>NAERM: interdependency analysis and system resilience curve modeling</li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <li>TASTI-GRID: weather and power system resilience correlation analysis</li>
-              <li>ASCENDS: advanced data science toolkit for non-data scientists</li>
-              <li>ORiGAMI: graph analytics for medical innovation (R&amp;D 100 Award, 2016)</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Awards merged into Highlights and awards -->
-
       <section class="card" id="publications">
         <h2>Selected publications</h2>
         <p style="margin-bottom: 10px;">
@@ -269,29 +284,15 @@
           <li>Random walk based entity ranking on graph for multidimensional recommendation (RecSys, 2011)</li>
         </ul>
       </section>
-
-      <section class="card" id="education">
-        <h2>Education</h2>
-        <ul>
-          <li>KAIST, South Korea — B.S., Computer Science (2004)</li>
-          <li>Seoul National University, South Korea — Ph.D., Computer Science and Engineering (2012)</li>
-        </ul>
-      </section>
-
-      <aside class="card" id="contact">
-        <h2>Contact</h2>
-        <ul>
-          <li>Email: lees4 [at] ornl [dot] gov</li>
-        </ul>
-      </aside>
     </div>
 
     <footer>
       <div>© 2026 Sangkeun Matthew Lee</div>
       <div>
-        <a href="#publications">Publications</a> ·
+        <a href="#contact">Contact</a> ·
+        <a href="#education">Education</a> ·
         <a href="#projects">Projects</a> ·
-        <a href="#contact">Contact</a>
+        <a href="#publications">Publications</a>
       </div>
     </footer>
   </div>

@@ -11,7 +11,7 @@
   <style>
     :root {
       --bg: #0b0f14;
-      --card: rgba(16, 24, 36, 0.70);
+      --card: rgba(16, 24, 36, 0.72);
       --text: #e6edf3;
       --muted: #9fb0c0;
       --accent: #7aa2ff;
@@ -35,7 +35,7 @@
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    .container { max-width: 980px; margin: 0 auto; padding: 56px 20px 64px; }
+    .container { max-width: 1020px; margin: 0 auto; padding: 56px 20px 64px; }
 
     header {
       display: grid;
@@ -92,18 +92,16 @@
       font-size: 0.95rem;
     }
 
-    .grid {
+    .layout {
       display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
+      grid-template-columns: 1.35fr 0.65fr;
       gap: 16px;
-      margin-top: 18px;
+      align-items: start;
     }
 
-    @media (max-width: 900px) {
-      .grid { grid-template-columns: 1fr; }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
     }
-
-    .span-2 { grid-column: 1 / -1; }
 
     .card {
       background: var(--card);
@@ -121,7 +119,6 @@
     }
 
     p, li { color: var(--muted); }
-
     ul { margin-left: 18px; }
     li { margin: 6px 0; }
 
@@ -141,7 +138,7 @@
       gap: 10px;
     }
 
-    .meta div {
+    .meta .row {
       padding: 12px;
       border: 1px solid var(--border);
       border-radius: 12px;
@@ -149,7 +146,7 @@
     }
 
     .label { color: var(--text); font-weight: 600; font-size: 0.95rem; }
-    .value { margin-top: 4px; color: var(--muted); font-size: 0.95rem; }
+    .value { margin-top: 4px; color: var(--muted); font-size: 0.95rem; overflow-wrap: anywhere; }
 
     footer {
       margin-top: 22px;
@@ -175,135 +172,134 @@
         <div class="pills">
           <a class="pill" href="https://scholar.google.com/citations?user=DcyrVNoAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
           <a class="pill" href="https://www.ornl.gov/staff-profile/sangkeun-matt-m-lee" target="_blank" rel="noopener noreferrer">ORNL profile</a>
-          <a class="pill" href="#quicklinks">Quick links</a>
-          <a class="pill" href="#education">Education</a>
+          <a class="pill" href="https://matthewslee.netlify.app" target="_blank" rel="noopener noreferrer">Author site</a>
+          <a class="pill" href="https://youtube.com/@dailybible?si=RHEnKdJNGYVpZZpt" target="_blank" rel="noopener noreferrer">YouTube</a>
           <a class="pill" href="#summary">Summary</a>
           <a class="pill" href="#projects">Projects</a>
-          <a class="pill" href="#highlights">Highlights</a>
           <a class="pill" href="#publications">Publications</a>
         </div>
       </div>
     </header>
 
-    <div class="grid">
-      <aside class="card" id="quicklinks">
-        <h2>My hobby projects</h2>
-        <div class="meta">
-          <div>
-            <div class="label">Contact</div>
-            <div class="value">lees4 [at] ornl [dot] gov</div>
+    <div class="layout">
+      <main>
+        <section class="card" id="summary">
+          <h2>Summary</h2>
+          <p>
+            I work on data-driven modeling and analytics across interconnected systems, including resilience and reliability questions for critical infrastructure.
+            For the authoritative and complete publication list, see my Google Scholar profile.
+          </p>
+
+          <div class="two-col" style="margin-top: 14px;">
+            <div class="card" style="padding: 14px;">
+              <h2 style="margin-bottom: 8px;">Research interests</h2>
+              <ul>
+                <li>Large-scale graph mining and analytics</li>
+                <li>Big data systems and architectures</li>
+                <li>Information retrieval and recommender systems</li>
+                <li>Critical infrastructure resilience and interdependency</li>
+                <li>Applied machine learning for scientific and operational data</li>
+              </ul>
+            </div>
+            <div class="card" style="padding: 14px;">
+              <h2 style="margin-bottom: 8px;">Highlights and awards</h2>
+              <ul>
+                <li>ORNL CSMD Distinguished Software Award (2023)</li>
+                <li>IEEE IRI Best Poster Award (2023)</li>
+                <li>R&amp;D 100 Award (2016): ORiGAMI (Oak Ridge Graph Analytics for Medical Innovation)</li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <div class="label">Google Scholar</div>
-            <div class="value"><a href="https://scholar.google.com/citations?user=DcyrVNoAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">scholar.google.com/citations?user=DcyrVNoAAAAJ</a></div>
+        </section>
+
+        <section class="card" id="projects" style="margin-top: 16px;">
+          <h2>Selected projects</h2>
+          <div class="two-col">
+            <div>
+              <ul>
+                <li>URBAN-NET: interdependency analytics for critical infrastructure resilience</li>
+                <li>EAGLE-I: data collection and standardization for geo-located energy information</li>
+                <li>NAERM: interdependency analysis and system resilience curve modeling</li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li>TASTI-GRID: weather and power system resilience correlation analysis</li>
+                <li>ASCENDS: advanced data science toolkit for non-data scientists</li>
+                <li>ORiGAMI: graph analytics for medical innovation</li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <div class="label">ORNL profile</div>
-            <div class="value"><a href="https://www.ornl.gov/staff-profile/sangkeun-matt-m-lee" target="_blank" rel="noopener noreferrer">ornl.gov/staff-profile/sangkeun-matt-m-lee</a></div>
+        </section>
+
+        <section class="card" id="publications" style="margin-top: 16px;">
+          <h2>Publications</h2>
+          <p style="margin-bottom: 10px;">
+            Full publications and citation metrics are on Google Scholar. Below is a short split view for quick scanning.
+          </p>
+
+          <h3 style="margin: 6px 0 8px; font-size: 1rem; font-weight: 700; color: var(--text);">Top cited publications</h3>
+          <ul>
+            <li>Aggregation and data analysis of corrosion studies in molten chloride and fluoride salts (Journal of Nuclear Materials, 2018)</li>
+            <li>Solute segregation at the Al/θ′-Al2Cu interface in Al-Cu alloys (Acta Materialia, 2017)</li>
+            <li>Random walk based entity ranking on graph for multidimensional recommendation (RecSys, 2011)</li>
+            <li>PathRank: Ranking nodes on a heterogeneous graph for flexible hybrid recommender systems (Expert Systems with Applications, 2013)</li>
+          </ul>
+
+          <h3 style="margin: 14px 0 8px; font-size: 1rem; font-weight: 700; color: var(--text);">Most recent publications</h3>
+          <ul>
+            <li>A dataset of recorded electricity outages by United States county 2014–2022 (Scientific Data, 2024)</li>
+            <li>Quantifying the power system resilience of the U.S. power grid through weather and power outage data mapping (IEEE Access, 2023)</li>
+            <li>COVID-19 pandemic ramifications on residential smart homes energy use load profiles (Energy and Buildings, 2022)</li>
+          </ul>
+        </section>
+      </main>
+
+      <aside>
+        <section class="card" id="quicklinks">
+          <h2>My hobby projects</h2>
+          <div class="meta">
+            <div class="row">
+              <div class="label">Contact</div>
+              <div class="value">lees4 [at] ornl [dot] gov</div>
+            </div>
+            <div class="row">
+              <div class="label">Author site</div>
+              <div class="value"><a href="https://matthewslee.netlify.app" target="_blank" rel="noopener noreferrer">matthewslee.netlify.app</a></div>
+            </div>
+            <div class="row">
+              <div class="label">YouTube</div>
+              <div class="value"><a href="https://youtube.com/@dailybible?si=RHEnKdJNGYVpZZpt" target="_blank" rel="noopener noreferrer">youtube.com/@dailybible</a></div>
+            </div>
+            <div class="row">
+              <div class="label">Open source</div>
+              <div class="value"><a href="https://github.com/liza183" target="_blank" rel="noopener noreferrer">github.com/liza183</a></div>
+            </div>
+            <div class="row">
+              <div class="label">Google Scholar</div>
+              <div class="value"><a href="https://scholar.google.com/citations?user=DcyrVNoAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">scholar.google.com/citations?user=DcyrVNoAAAAJ</a></div>
+            </div>
+            <div class="row">
+              <div class="label">ORNL profile</div>
+              <div class="value"><a href="https://www.ornl.gov/staff-profile/sangkeun-matt-m-lee" target="_blank" rel="noopener noreferrer">ornl.gov/staff-profile/sangkeun-matt-m-lee</a></div>
+            </div>
           </div>
-          <div>
-            <div class="label">Author site</div>
-            <div class="value"><a href="https://matthewslee.netlify.app" target="_blank" rel="noopener noreferrer">matthewslee.netlify.app</a></div>
-          </div>
-          <div>
-            <div class="label">YouTube</div>
-            <div class="value"><a href="https://youtube.com/@dailybible?si=RHEnKdJNGYVpZZpt" target="_blank" rel="noopener noreferrer">youtube.com/@dailybible</a></div>
-          </div>
-          <div>
-            <div class="label">Open source</div>
-            <div class="value"><a href="https://github.com/liza183" target="_blank" rel="noopener noreferrer">GitHub: liza183</a></div>
-          </div>
-        </div>
+        </section>
+
+        <section class="card" id="education" style="margin-top: 16px;">
+          <h2>Education</h2>
+          <ul>
+            <li>KAIST, South Korea — B.S., Computer Science (2004)</li>
+            <li>Seoul National University, South Korea — Ph.D., Computer Science and Engineering (2012)</li>
+          </ul>
+        </section>
       </aside>
-
-      <section class="card" id="education">
-        <h2>Education</h2>
-        <ul>
-          <li>KAIST, South Korea — B.S., Computer Science (2004)</li>
-          <li>Seoul National University, South Korea — Ph.D., Computer Science and Engineering (2012)</li>
-        </ul>
-      </section>
-
-      <section class="card span-2" id="summary">
-        <h2>Summary</h2>
-        <p>
-          I work on data-driven modeling and analytics across interconnected systems, including resilience and reliability questions for critical infrastructure.
-          For the authoritative and complete publication list, see my Google Scholar profile.
-        </p>
-
-        <div class="two-col" style="margin-top: 14px;">
-          <div class="card" style="padding: 14px;">
-            <h2 style="margin-bottom: 8px;">Research interests</h2>
-            <ul>
-              <li>Large-scale graph mining and analytics</li>
-              <li>Big data systems and architectures</li>
-              <li>Information retrieval and recommender systems</li>
-              <li>Critical infrastructure resilience and interdependency</li>
-              <li>Applied machine learning for scientific and operational data</li>
-            </ul>
-          </div>
-          <div class="card" style="padding: 14px;" id="highlights">
-            <h2 style="margin-bottom: 8px;">Highlights and awards</h2>
-            <ul>
-              <li>ORNL CSMD Distinguished Software Award (2023)</li>
-              <li>IEEE IRI Best Poster Award (2023)</li>
-              <li>R&amp;D 100 Award (2016): ORiGAMI (Oak Ridge Graph Analytics for Medical Innovation)</li>
-              <li>Ph.D., Computer Science and Engineering (Seoul National University, 2012)</li>
-              <li>Joined ORNL in 2013</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="card span-2" id="projects">
-        <h2>Selected projects</h2>
-        <div class="two-col">
-          <div>
-            <ul>
-              <li>URBAN-NET: interdependency analytics for critical infrastructure resilience</li>
-              <li>EAGLE-I: data collection and standardization for geo-located energy information</li>
-              <li>NAERM: interdependency analysis and system resilience curve modeling</li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <li>TASTI-GRID: weather and power system resilience correlation analysis</li>
-              <li>ASCENDS: advanced data science toolkit for non-data scientists</li>
-              <li>ORiGAMI: graph analytics for medical innovation (R&amp;D 100 Award, 2016)</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Quick links moved to top -->
-
-      <section class="card" id="publications">
-        <h2>Publications</h2>
-        <p style="margin-bottom: 10px;">
-          Full publications and citation metrics are on Google Scholar. Below is a short split view for quick scanning.
-        </p>
-
-        <h3 style="margin: 6px 0 8px; font-size: 1rem; font-weight: 700; color: var(--text);">Top cited publications</h3>
-        <ul>
-          <li>Aggregation and data analysis of corrosion studies in molten chloride and fluoride salts (Journal of Nuclear Materials, 2018)</li>
-          <li>Solute segregation at the Al/θ′-Al2Cu interface in Al-Cu alloys (Acta Materialia, 2017)</li>
-          <li>Random walk based entity ranking on graph for multidimensional recommendation (RecSys, 2011)</li>
-          <li>PathRank: Ranking nodes on a heterogeneous graph for flexible hybrid recommender systems (Expert Systems with Applications, 2013)</li>
-        </ul>
-
-        <h3 style="margin: 14px 0 8px; font-size: 1rem; font-weight: 700; color: var(--text);">Most recent publications</h3>
-        <ul>
-          <li>A dataset of recorded electricity outages by United States county 2014–2022 (Scientific Data, 2024)</li>
-          <li>Quantifying the power system resilience of the U.S. power grid through weather and power outage data mapping (IEEE Access, 2023)</li>
-          <li>COVID-19 pandemic ramifications on residential smart homes energy use load profiles (Energy and Buildings, 2022)</li>
-        </ul>
-      </section>
     </div>
 
     <footer>
       <div>© 2026 Sangkeun Matthew Lee</div>
       <div>
-        <a href="#quicklinks">Quick links</a> ·
+        <a href="#quicklinks">My hobby projects</a> ·
         <a href="#education">Education</a> ·
         <a href="#projects">Projects</a> ·
         <a href="#publications">Publications</a>

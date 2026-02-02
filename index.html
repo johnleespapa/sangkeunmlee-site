@@ -94,10 +94,12 @@
 
     .grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: 1.25fr 0.75fr;
       gap: 16px;
       margin-top: 18px;
     }
+
+    .span-2 { grid-column: 1 / -1; }
 
     @media (max-width: 900px) {
       .grid { grid-template-columns: 1fr; }
@@ -231,14 +233,24 @@
         </div>
       </aside>
 
-      <section class="card" id="projects">
+      <section class="card span-2" id="projects">
         <h2>Selected projects</h2>
-        <ul>
-          <li>URBAN-NET: critical infrastructure interdependency analytics</li>
-          <li>EAGLE-I: environment for analysis of geo-located energy information</li>
-          <li>NAERM: North American Energy Resilience Model</li>
-          <li>TASTI-GRID: assisting grid resilience investment decision-making</li>
-        </ul>
+        <div class="two-col">
+          <div>
+            <ul>
+              <li>URBAN-NET: interdependency analytics for critical infrastructure resilience</li>
+              <li>EAGLE-I: data collection and standardization for geo-located energy information</li>
+              <li>NAERM: interdependency analysis and system resilience curve modeling</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>TASTI-GRID: weather and power system resilience correlation analysis</li>
+              <li>ASCENDS: advanced data science toolkit for non-data scientists</li>
+              <li>ORiGAMI: graph analytics for medical innovation (R&amp;D 100 Award, 2016)</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <!-- Awards merged into Highlights and awards -->
@@ -246,15 +258,15 @@
       <section class="card" id="publications">
         <h2>Selected publications</h2>
         <p style="margin-bottom: 10px;">
-          A short, representative list based on the publicly visible Scholar profile. Full list and up-to-date citation metrics are on Google Scholar.
+          A short representative list. Full publications and citation metrics are on Google Scholar.
         </p>
         <ul>
-          <li>Random walk based entity ranking on graph for multidimensional recommendation (RecSys 2011)</li>
-          <li>PathRank: Ranking nodes on a heterogeneous graph for flexible hybrid recommender systems (Expert Systems with Applications, 2013)</li>
-          <li>Aggregation and data analysis of corrosion studies in molten chloride and fluoride salts (Journal of Nuclear Materials, 2018)</li>
-          <li>Modern data analytics approach to predict creep of high-temperature alloys (Acta Materialia, 2019)</li>
-          <li>COVID-19 pandemic ramifications on residential smart homes energy use load profiles (Energy and Buildings, 2022)</li>
           <li>Quantifying the power system resilience of the U.S. power grid through weather and power outage data mapping (IEEE Access, 2023)</li>
+          <li>COVID-19 pandemic ramifications on residential smart homes energy use load profiles (Energy and Buildings, 2022)</li>
+          <li>Modern data analytics approach to predict creep of high-temperature alloys (Acta Materialia, 2019)</li>
+          <li>Aggregation and data analysis of corrosion studies in molten chloride and fluoride salts (Journal of Nuclear Materials, 2018)</li>
+          <li>PathRank: Ranking nodes on a heterogeneous graph for flexible hybrid recommender systems (Expert Systems with Applications, 2013)</li>
+          <li>Random walk based entity ranking on graph for multidimensional recommendation (RecSys, 2011)</li>
         </ul>
       </section>
 

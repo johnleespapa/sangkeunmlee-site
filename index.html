@@ -4,104 +4,179 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sangkeun Matthew Lee</title>
-  <meta name="description" content="Sangkeun Matthew Lee — research profile, selected work, and links." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Sangkeun Matthew Lee — personal research homepage with selected work, projects, and links." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg: #0b0f14;
-      --card: #101824;
+      --card: rgba(16, 24, 36, 0.70);
       --text: #e6edf3;
       --muted: #9fb0c0;
       --accent: #7aa2ff;
-      --border: rgba(255,255,255,0.08);
+      --border: rgba(255,255,255,0.10);
+      --shadow: 0 18px 60px rgba(0,0,0,0.45);
     }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      background: radial-gradient(800px 400px at 20% 0%, rgba(122,162,255,0.14), transparent 60%),
-                  radial-gradient(800px 400px at 80% 20%, rgba(155,122,255,0.10), transparent 60%),
-                  var(--bg);
+      background:
+        radial-gradient(900px 450px at 15% 0%, rgba(122,162,255,0.16), transparent 60%),
+        radial-gradient(900px 450px at 85% 20%, rgba(155,122,255,0.12), transparent 60%),
+        var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.65;
       min-height: 100vh;
     }
+
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    .container { max-width: 900px; margin: 0 auto; padding: 56px 20px; }
+    .container { max-width: 980px; margin: 0 auto; padding: 56px 20px 64px; }
 
     header {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 18px;
+      align-items: center;
       padding-bottom: 22px;
       border-bottom: 1px solid var(--border);
-      margin-bottom: 26px;
+      margin-bottom: 22px;
     }
 
-    h1 { font-size: 2.2rem; font-weight: 600; letter-spacing: -0.02em; }
-    .subtitle { color: var(--muted); font-weight: 400; }
+    @media (max-width: 640px) {
+      header { grid-template-columns: 1fr; }
+    }
 
-    .links {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
+    .headshot {
+      width: 110px;
+      height: 110px;
+      border-radius: 18px;
+      object-fit: cover;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    h1 {
+      font-size: 2.1rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+
+    .subtitle {
       margin-top: 6px;
+      color: var(--muted);
+      font-weight: 400;
     }
+
+    .pills {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
     .pill {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
       padding: 10px 12px;
       border: 1px solid var(--border);
       border-radius: 999px;
       background: rgba(16, 24, 36, 0.55);
       color: var(--text);
+      font-weight: 500;
+      font-size: 0.95rem;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: 1.2fr 0.8fr;
       gap: 16px;
+      margin-top: 18px;
     }
-    @media (min-width: 820px) {
-      .grid { grid-template-columns: 1.2fr 0.8fr; }
+
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
     }
 
     .card {
-      background: rgba(16, 24, 36, 0.65);
+      background: var(--card);
       border: 1px solid var(--border);
       border-radius: 14px;
       padding: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.20);
     }
 
-    h2 { font-size: 1.05rem; font-weight: 600; margin-bottom: 10px; }
-    p { color: var(--muted); }
+    h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
 
-    ul { margin-left: 18px; color: var(--muted); }
+    p, li { color: var(--muted); }
+
+    ul { margin-left: 18px; }
     li { margin: 6px 0; }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    @media (max-width: 780px) {
+      .two-col { grid-template-columns: 1fr; }
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .meta div {
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: rgba(10, 15, 20, 0.25);
+    }
+
+    .label { color: var(--text); font-weight: 600; font-size: 0.95rem; }
+    .value { margin-top: 4px; color: var(--muted); font-size: 0.95rem; }
 
     footer {
       margin-top: 22px;
-      padding-top: 18px;
+      padding-top: 16px;
       border-top: 1px solid var(--border);
       color: var(--muted);
       font-size: 0.9rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: space-between;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>Sangkeun Matthew Lee</h1>
-      <div class="subtitle">Personal research homepage</div>
+      <img class="headshot" src="headshot.jpg" alt="Sangkeun Matthew Lee" />
+      <div>
+        <h1>Sangkeun Matthew Lee</h1>
+        <div class="subtitle">Personal research homepage</div>
 
-      <div class="links">
-        <a class="pill" href="https://scholar.google.com/citations?user=DcyrVNoAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-        <a class="pill" href="#selected-work">Selected work</a>
-        <a class="pill" href="#contact">Contact</a>
+        <div class="pills">
+          <a class="pill" href="https://scholar.google.com/citations?user=DcyrVNoAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a class="pill" href="https://www.ornl.gov/staff-profile/sangkeun-matt-m-lee" target="_blank" rel="noopener noreferrer">ORNL profile</a>
+          <a class="pill" href="#publications">Selected publications</a>
+          <a class="pill" href="#projects">Projects</a>
+          <a class="pill" href="#contact">Contact</a>
+        </div>
       </div>
     </header>
 
@@ -109,38 +184,103 @@
       <section class="card">
         <h2>Summary</h2>
         <p>
-          Research profile and selected work. This site intentionally keeps details minimal and links out to Google Scholar for the authoritative publication list.
+          I work on data-driven modeling and analytics across interconnected systems, including resilience and reliability questions for critical infrastructure.
+          For the authoritative and complete publication list, see my Google Scholar profile.
         </p>
+
+        <div class="two-col" style="margin-top: 14px;">
+          <div class="card" style="padding: 14px;">
+            <h2 style="margin-bottom: 8px;">Research interests</h2>
+            <ul>
+              <li>Large-scale graph mining and analytics</li>
+              <li>Big data systems and architectures</li>
+              <li>Information retrieval and recommender systems</li>
+              <li>Critical infrastructure resilience and interdependency</li>
+              <li>Applied machine learning for scientific and operational data</li>
+            </ul>
+          </div>
+          <div class="card" style="padding: 14px;">
+            <h2 style="margin-bottom: 8px;">Highlights</h2>
+            <ul>
+              <li>R&D 100 Award (2016) for ORiGAMI (Oak Ridge Graph Analytics for Medical Innovation)</li>
+              <li>Ph.D., Computer Science and Engineering (Seoul National University, 2012)</li>
+              <li>Joined ORNL in 2013</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <aside class="card">
-        <h2>Focus</h2>
+        <h2>Quick links</h2>
+        <div class="meta">
+          <div>
+            <div class="label">Google Scholar</div>
+            <div class="value"><a href="https://scholar.google.com/citations?user=DcyrVNoAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">scholar.google.com/citations?user=DcyrVNoAAAAJ</a></div>
+          </div>
+          <div>
+            <div class="label">ORNL profile</div>
+            <div class="value"><a href="https://www.ornl.gov/staff-profile/sangkeun-matt-m-lee" target="_blank" rel="noopener noreferrer">ornl.gov/staff-profile/sangkeun-matt-m-lee</a></div>
+          </div>
+          <div>
+            <div class="label">Open source</div>
+            <div class="value"><a href="https://github.com/liza183" target="_blank" rel="noopener noreferrer">GitHub: liza183</a></div>
+          </div>
+        </div>
+      </aside>
+
+      <section class="card" id="projects">
+        <h2>Selected projects</h2>
         <ul>
-          <li>Critical infrastructure resilience</li>
-          <li>Networked systems, interdependency</li>
-          <li>Risk, reliability, and data-driven modeling</li>
+          <li>URBAN-NET: critical infrastructure interdependency analytics</li>
+          <li>EAGLE-I: environment for analysis of geo-located energy information</li>
+          <li>NAERM: North American Energy Resilience Model</li>
+          <li>TASTI-GRID: assisting grid resilience investment decision-making</li>
+        </ul>
+      </section>
+
+      <aside class="card">
+        <h2>Awards</h2>
+        <ul>
+          <li>R&D 100 Award (2016): ORiGAMI</li>
+          <li>Honorable Mention Poster Award (ORNL Postdoctoral Symposium, 2013)</li>
+          <li>Best Paper Award (PIKM at CIKM, 2011)</li>
         </ul>
       </aside>
 
-      <section class="card" id="selected-work">
-        <h2>Selected work</h2>
+      <section class="card" id="publications">
+        <h2>Selected publications</h2>
+        <p style="margin-bottom: 10px;">
+          A short, representative list based on the publicly visible Scholar profile. Full list and up-to-date citation metrics are on Google Scholar.
+        </p>
         <ul>
-          <li>Coming soon: curated list of representative papers with 1-line takeaways.</li>
-          <li>Full publication list: link above to Google Scholar.</li>
+          <li>Random walk based entity ranking on graph for multidimensional recommendation (RecSys 2011)</li>
+          <li>PathRank: Ranking nodes on a heterogeneous graph for flexible hybrid recommender systems (Expert Systems with Applications, 2013)</li>
+          <li>Aggregation and data analysis of corrosion studies in molten chloride and fluoride salts (Journal of Nuclear Materials, 2018)</li>
+          <li>Modern data analytics approach to predict creep of high-temperature alloys (Acta Materialia, 2019)</li>
+          <li>COVID-19 pandemic ramifications on residential smart homes energy use load profiles (Energy and Buildings, 2022)</li>
+          <li>Quantifying the power system resilience of the U.S. power grid through weather and power outage data mapping (IEEE Access, 2023)</li>
         </ul>
       </section>
 
       <aside class="card" id="contact">
         <h2>Contact</h2>
         <ul>
-          <li>Email: (add)</li>
-          <li>LinkedIn: (add)</li>
+          <li>Email: <a href="mailto:lees4@ornl.gov">lees4@ornl.gov</a></li>
+          <li>LinkedIn: <span style="color: var(--muted);">(add link if desired)</span></li>
         </ul>
+        <p style="margin-top: 10px; font-size: 0.9rem;">
+          If you prefer, I can remove email from the homepage and keep contact via Scholar only.
+        </p>
       </aside>
     </div>
 
     <footer>
-      © 2026 Sangkeun Matthew Lee
+      <div>© 2026 Sangkeun Matthew Lee</div>
+      <div>
+        <a href="#publications">Publications</a> ·
+        <a href="#projects">Projects</a> ·
+        <a href="#contact">Contact</a>
+      </div>
     </footer>
   </div>
 </body>

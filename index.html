@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sangkeun Matthew Lee</title>
+  <meta name="description" content="Sangkeun Matthew Lee — research profile, selected work, and links." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #101824;
+      --text: #e6edf3;
+      --muted: #9fb0c0;
+      --accent: #7aa2ff;
+      --border: rgba(255,255,255,0.08);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(800px 400px at 20% 0%, rgba(122,162,255,0.14), transparent 60%),
+                  radial-gradient(800px 400px at 80% 20%, rgba(155,122,255,0.10), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 56px 20px; }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 26px;
+    }
+
+    h1 { font-size: 2.2rem; font-weight: 600; letter-spacing: -0.02em; }
+    .subtitle { color: var(--muted); font-weight: 400; }
+
+    .links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(16, 24, 36, 0.55);
+      color: var(--text);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 820px) {
+      .grid { grid-template-columns: 1.2fr 0.8fr; }
+    }
+
+    .card {
+      background: rgba(16, 24, 36, 0.65);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    h2 { font-size: 1.05rem; font-weight: 600; margin-bottom: 10px; }
+    p { color: var(--muted); }
+
+    ul { margin-left: 18px; color: var(--muted); }
+    li { margin: 6px 0; }
+
+    footer {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Sangkeun Matthew Lee</h1>
+      <div class="subtitle">Personal research homepage</div>
+
+      <div class="links">
+        <a class="pill" href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        <a class="pill" href="#selected-work">Selected work</a>
+        <a class="pill" href="#contact">Contact</a>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Summary</h2>
+        <p>
+          Research profile and selected work. This site intentionally keeps details minimal and links out to Google Scholar for the authoritative publication list.
+        </p>
+      </section>
+
+      <aside class="card">
+        <h2>Focus</h2>
+        <ul>
+          <li>Critical infrastructure resilience</li>
+          <li>Networked systems, interdependency</li>
+          <li>Risk, reliability, and data-driven modeling</li>
+        </ul>
+      </aside>
+
+      <section class="card" id="selected-work">
+        <h2>Selected work</h2>
+        <ul>
+          <li>Coming soon: curated list of representative papers with 1-line takeaways.</li>
+          <li>Full publication list: link above to Google Scholar.</li>
+        </ul>
+      </section>
+
+      <aside class="card" id="contact">
+        <h2>Contact</h2>
+        <ul>
+          <li>Email: (add)</li>
+          <li>LinkedIn: (add)</li>
+        </ul>
+      </aside>
+    </div>
+
+    <footer>
+      © 2026 Sangkeun Matthew Lee
+    </footer>
+  </div>
+</body>
+</html>
